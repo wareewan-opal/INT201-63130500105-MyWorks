@@ -45,12 +45,16 @@ zodiac(1900);
 function randNumber() {
     return Math.floor(Math.random() * 10) + 1; // ไม่ให้เป็นเลขทศนิยม
 }
-const randValue = randNumber();
+const randValue = randNumber(); // const ไม่สามารถเปลี่ยนค่าได้
+//ให้ randValue มีค่าเท่ากับ randNumber()
+
+//กำหนดตัวแปรของผู้เล่นที่เราคิดขึ้นมาเอง
 let guessvalue = 5;
+
 if (randValue >= 1 && randValue <= 10) {
     if (randValue > guessvalue) {
-        console.log(`Too Low , the random num is : ${randNumber}`);
+        console.log(`Too Low , the random num is : ${randValue}`);
     } else if (randValue < guessvalue) {
-        console.log(`Too High , the random num is: ${randNumber}`);
+        console.log(`Too High , the random num is: ${randValue}`);
     } else console.log("You WIN!!!");
 }
