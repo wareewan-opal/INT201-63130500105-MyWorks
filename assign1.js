@@ -41,7 +41,6 @@ function zodiac(years) {
 }
 zodiac(1900);
 
-
 function randNumber() {
     return Math.floor(Math.random() * 10) + 1; // ไม่ให้เป็นเลขทศนิยม
 }
@@ -50,7 +49,6 @@ const randValue = randNumber(); // const ไม่สามารถเปลี
 
 //กำหนดตัวแปรของผู้เล่นที่เราคิดขึ้นมาเอง
 let guessvalue = 5;
-
 if (randValue >= 1 && randValue <= 10) {
     if (randValue > guessvalue) {
         console.log(`Too Low , the random num is : ${randValue}`);
@@ -58,3 +56,15 @@ if (randValue >= 1 && randValue <= 10) {
         console.log(`Too High , the random num is: ${randValue}`);
     } else console.log("You WIN!!!");
 }
+
+const pound = 0.453592;
+const inches = 0.0254;
+
+function getBMI(a, b) {
+    let height = a * pound;
+    let weight = b * inches;
+    return weight / (height * height);
+}
+console.log(136.686602555 * pound);
+console.log(68.11024 * inches);
+console.log(getBMI(68.11024, 136.686602555));
