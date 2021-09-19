@@ -40,4 +40,17 @@ function zodiac(years) {
     }
 }
 zodiac(1900);
-console.log(zodiac);
+
+
+function randNumber() {
+    return Math.floor(Math.random() * 10) + 1; // ไม่ให้เป็นเลขทศนิยม
+}
+const randValue = randNumber();
+let guessvalue = 5;
+if (randValue >= 1 && randValue <= 10) {
+    if (randValue > guessvalue) {
+        console.log(`Too Low , the random num is : ${randNumber}`);
+    } else if (randValue < guessvalue) {
+        console.log(`Too High , the random num is: ${randNumber}`);
+    } else console.log("You WIN!!!");
+}
